@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Title from "../components/Title";
 
-export default function Esignature() {
+export default function EsignatureApp() {
+    const {name, setName} = useState("");
+
+    const handleNameChange = (e)=>{
+console.log(e.target.value);
+
+    }
 const inputStyle ={
     border: "none",
     borderBottom: "2px dotted",
@@ -11,8 +17,8 @@ const inputStyle ={
  document.body.style.background = "#eee";
   return (
     <div className="container text-center">
-      <Title classes={"title"} text={"Name"} />
-      <Title classes={"main-title nb-4"} text={"Date"} />
+      <Title classes={"title"} text={"name"} />
+      <Title classes={"main-title mb-4"} text={"Date"} />
 
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
@@ -34,7 +40,8 @@ style={
     }
 }>
       <input type="date" value={""} style={inputStyle}/>
-      <input type="text" value={""} style={inputStyle}/>
+      <input type="text" value={name} style={inputStyle} 
+      onChange={handleNameChange}/>
       </footer>
 
     </div>
