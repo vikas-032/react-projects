@@ -8,7 +8,7 @@ const inputStyle ={
     outline: "none",
     padding: ".35rem 0",
 };
- doument
+ document.body.style.background = "#eee";
   return (
     <div className="container text-center">
       <Title classes={"title"} text={"Name"} />
@@ -24,8 +24,18 @@ const inputStyle ={
         tenetur nesciunt totam voluptate, itaque magnam laudantium repellat
         minima quas. Consequuntur, qui amet? At, tempore reiciendis?
       </p>
+      <footer
+className="d-flex"
+style={
+    {
+        justifyContent: "space-around",
+        position: "relative",
+        top:"40vh",
+    }
+}>
       <input type="date" value={""} style={inputStyle}/>
       <input type="text" value={""} style={inputStyle}/>
+      </footer>
 
     </div>
   );
